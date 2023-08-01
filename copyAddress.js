@@ -104,7 +104,8 @@ javascript: (function () {
         case 'attention':
         case 'line1':
         case 'line2':
-          addressString += addressObject[key] + '\n';
+          if (addressObject[key] !== '')
+            addressString += addressObject[key] + '\n';
           break;
         case 'locality':
           addressString += addressObject[key] + ', ';
